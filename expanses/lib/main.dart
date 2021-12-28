@@ -1,3 +1,4 @@
+import 'package:expanses/models/transaction.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,12 @@ class ExpansesApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  final _transactions = [
+    Transaction(
+        id: 1, title: 'Conta de Luz', value: 310.76, date: DateTime.now()),
+    Transaction(
+        id: 2, title: 'Conta de Água', value: 210.00, date: DateTime.now()),
+  ];
 
   @override
   Widget build(BuildContext context) {
