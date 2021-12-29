@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:expanses/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'transaction_form.dart';
@@ -17,6 +19,19 @@ class _TransactionUserState extends State<TransactionUser> {
     Transaction(
         id: 2, title: 'Conta de Água', value: 210.00, date: DateTime.now()),
   ];
+
+  _addTransaction(String title, double value) {
+    final newTransaction = Transaction(
+      id: Random().nextDouble().toInt(),
+      title: title,
+      value: value,
+      date: DateTime.now(),
+    );
+
+    setState(() {
+      _transactions.add(newTransaction);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
