@@ -23,6 +23,9 @@ class ExpansesApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  final titleController = TextEditingController();
+  final valueController = TextEditingController();
+
   final _transactions = [
     Transaction(
         id: 1, title: 'Conta de Luz', value: 310.76, date: DateTime.now()),
@@ -101,11 +104,13 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Título',
                     ),
+                    controller: titleController,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Valor (R\$)',
                     ),
+                    controller: valueController,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -118,7 +123,10 @@ class MyHomePage extends StatelessWidget {
                             fontSize: 16,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          print(valueController.text);
+                          print(titleController.text);
+                        },
                       ),
                     ],
                   ),
