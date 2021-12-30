@@ -21,6 +21,12 @@ class ExpansesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MyHomePage(),
+      theme: ThemeData(
+        // primaryColor define uma cor fixa para o tema do app, primarySwatch define uma cor padrão e dependendo do componente o tom varia
+        primarySwatch: Colors.purple,
+        // cor de destaque/realce
+        accentColor: Colors.amber,
+      ),
     );
   }
 }
