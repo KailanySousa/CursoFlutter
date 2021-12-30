@@ -22,11 +22,11 @@ class ExpansesApp extends StatelessWidget {
     return MaterialApp(
       home: MyHomePage(),
       theme: ThemeData(
-        // primaryColor define uma cor fixa para o tema do app, primarySwatch define uma cor padrão e dependendo do componente o tom varia
-        primarySwatch: Colors.purple,
-        // cor de destaque/realce
-        accentColor: Colors.amber,
-      ),
+          // primaryColor define uma cor fixa para o tema do app, primarySwatch define uma cor padrão e dependendo do componente o tom varia
+          primarySwatch: Colors.purple,
+          // cor de destaque/realce
+          accentColor: Colors.amber,
+          fontFamily: 'Quicksand'),
     );
   }
 }
@@ -72,7 +72,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Despesas Pessoais'),
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+        title: Text(
+          'Despesas Pessoais',
+          style: TextStyle(
+            fontFamily: 'OpenSans',
+          ),
+        ),
         actions: [
           IconButton(
             onPressed: () => _openTransactionFormModal(context),
