@@ -10,7 +10,6 @@ class TransactionForm extends StatefulWidget {
   _TransactionFormState createState() => _TransactionFormState();
 }
 
-
 class _TransactionFormState extends State<TransactionForm> {
   final titleController = TextEditingController();
   final valueController = TextEditingController();
@@ -46,15 +45,38 @@ class _TransactionFormState extends State<TransactionForm> {
               keyboardType: TextInputType.numberWithOptions(decimal: true),
               onSubmitted: (_) => _submitForm,
             ),
+            Container(
+              height: 70,
+              child: Row(
+                children: [
+                  Text('Nenhuma data selecionada.'),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Selecionar Data',
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Theme.of(context).primaryColor),
+                  ),
                   child: Text(
                     'Nova Transação',
                     style: TextStyle(
-                      color: Colors.purple,
+                      color: Theme.of(context).textTheme.button?.color,
                       fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   onPressed: _submitForm,

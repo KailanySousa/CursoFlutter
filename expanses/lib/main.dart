@@ -23,11 +23,23 @@ class ExpansesApp extends StatelessWidget {
     return MaterialApp(
       home: MyHomePage(),
       theme: ThemeData(
-          // primaryColor define uma cor fixa para o tema do app, primarySwatch define uma cor padrão e dependendo do componente o tom varia
-          primarySwatch: Colors.purple,
-          // cor de destaque/realce
-          accentColor: Colors.amber,
-          fontFamily: 'Quicksand'),
+        // primaryColor define uma cor fixa para o tema do app, primarySwatch define uma cor padrão e dependendo do componente o tom varia
+        primarySwatch: Colors.purple,
+        // cor de destaque/realce
+        accentColor: Colors.amber,
+        fontFamily: 'Quicksand',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              button: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+      ),
     );
   }
 }
