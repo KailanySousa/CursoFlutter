@@ -108,9 +108,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
       title: Text(
         'Despesas Pessoais',
-        style: TextStyle(
-          fontFamily: 'OpenSans',
-        ),
       ),
       actions: [
         IconButton(
