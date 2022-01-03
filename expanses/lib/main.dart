@@ -113,16 +113,17 @@ class _MyHomePageState extends State<MyHomePage> {
         'Despesas Pessoais',
       ),
       actions: [
-        IconButton(
-          icon: Icon(_showChart ? Icons.list : Icons.show_chart_outlined),
-          onPressed: () {
-            setState(
-              () {
-                _showChart = !_showChart;
-              },
-            );
-          },
-        ),
+        if (isLandscape)
+          IconButton(
+            icon: Icon(_showChart ? Icons.list : Icons.show_chart_outlined),
+            onPressed: () {
+              setState(
+                () {
+                  _showChart = !_showChart;
+                },
+              );
+            },
+          ),
         IconButton(
           onPressed: () => _openTransactionFormModal(context),
           icon: Icon(Icons.add),
