@@ -1,8 +1,8 @@
 import 'package:expanses/components/adaptatives/adaptative_button.dart';
+import 'package:expanses/components/adaptatives/adaptative_date_picker.dart';
 import 'package:expanses/components/adaptatives/adaptative_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
 
 class TransactionForm extends StatefulWidget {
   final void Function(String, double, DateTime) onSubmit;
@@ -24,23 +24,6 @@ class _TransactionFormState extends State<TransactionForm> {
 
     if (title.isEmpty || value <= 0 || _selectedDate == null) return;
     widget.onSubmit(title, value, _selectedDate);
-  }
-
-  _showDatePicker() {
-    showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(2019),
-      lastDate: DateTime.now(),
-    ).then((pickerDate) {
-      if (pickerDate == null) {
-        return;
-      }
-
-      setState(() {
-        _selectedDate = pickerDate;
-      });
-    });
   }
 
   @override
@@ -67,31 +50,13 @@ class _TransactionFormState extends State<TransactionForm> {
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
                 onSubmitted: (_) => _submitForm,
               ),
-              Container(
-                height: 70,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        _selectedDate == null
-                            ? 'Nenhuma data selecionada.'
-                            : 'Data Selecionada: ${DateFormat('dd/MM/y').format(_selectedDate!)}',
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: _showDatePicker,
-                      child: Text(
-                        _selectedDate == null
-                            ? 'Selecionar data'
-                            : 'Alterar data',
-                        style: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+              AdaptativeDatePicker(
+                selectedDate: _selectedDate,
+                onDateChanged: (newDate) {
+                  setState(() {
+                    _selectedDate = newDate;
+                  });
+                },
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
