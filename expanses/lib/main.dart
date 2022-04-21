@@ -67,6 +67,12 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     print(state);
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance!.removeObserver(this);
+  }
+
   List<Transaction> get _recentTransactions {
     return _transactions
         .where(
