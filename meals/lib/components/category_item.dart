@@ -7,11 +7,11 @@ class CategoryItem extends StatelessWidget {
 
   CategoryItem(this.category);
 
-  void _selectCategory(BuildContext context) {
+  void _selectCategory(BuildContext context, Category category) {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (_) {
-          return CategoriesMealsScreen();
+          return CategoriesMealsScreen(category);
         },
       ),
     );
@@ -20,7 +20,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => _selectCategory(context),
+      onTap: () => _selectCategory(context, category),
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15),
       child: Container(
