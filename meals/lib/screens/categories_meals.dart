@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/category.dart';
 
-class CategoriesMealsScreen extends StatelessWidget {
+class CategoriesMeals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final category = ModalRoute.of(context)!.settings.arguments as Category;
