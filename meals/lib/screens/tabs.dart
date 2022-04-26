@@ -2,37 +2,55 @@ import 'package:flutter/material.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/favorite_meals.dart';
 
-class Tabs extends StatelessWidget {
-  const Tabs({Key? key}) : super(key: key);
+class Tabs extends StatefulWidget {
+  @override
+  _TabsState createState() => _TabsState();
+}
+
+class _TabsState extends State<Tabs> {
+  int _selectedScreenIndex = 0;
+
+  final List<String> _titles = [
+    'Lista de Categorias',
+    'Meus Favoritos',
+  ];
+
+  final List<Widget> _screens = [
+    Categories(),
+    FavoriteMeals(),
+  ];
+
+  _selectScreen(int index) {
+    setState(() {
+      _selectedScreenIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Vamos cozinhar?',
-          ),
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                icon: Icon(Icons.category),
-                text: 'Categorias',
-              ),
-              Tab(
-                icon: Icon(Icons.category),
-                text: 'Favoritos',
-              ),
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          _titles[_selectedScreenIndex],
         ),
-        body: TabBarView(
-          children: [
-            Categories(),
-            FavoriteMeals(),
-          ],
-        ),
+      ),
+      body: _screens[_selectedScreenIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: _selectScreen,
+        backgroundColor: Theme.of(context).primaryColor,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Theme.of(context).accentColor,
+        currentIndex: _selectedScreenIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: 'Categorias',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: 'Favoritos',
+          ),
+        ],
       ),
     );
   }
