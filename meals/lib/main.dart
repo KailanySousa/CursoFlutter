@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals/screens/categories_meals.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/meal_detail.dart';
+import 'package:meals/screens/tabs.dart';
 import 'package:meals/utils/app_routes.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: ThemeData(
         primarySwatch: Colors.pink,
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
             ),
       ),
       routes: {
-        AppRoutes.HOME: (ctx) => Categories(),
+        AppRoutes.HOME: (ctx) => Tabs(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMeals(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetail(),
       },
