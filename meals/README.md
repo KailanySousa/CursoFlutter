@@ -1,16 +1,28 @@
-# meals
+# Meals
 
-A new Flutter project.
+Aplicativo básico que possui uma lista de refeições separadas por categorias, sendo possível visualizar informações, ingredientes necessários e o passo a passo para executar a receita. Além de um tela de configurações, na qual é possível aplicar filtros por refeições sem glúten, sem lactose, veganas e/ou vegetarianas e marcar suas refeições favoritas.
 
-## Getting Started
+## Telas
 
-This project is a starting point for a Flutter application.
+### Lista de categorias
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://user-images.githubusercontent.com/43482340/166332262-7891b926-f159-470a-9863-bfd90cdc74fc.png" width="200px"/>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Lista de refeições por categoria
+<img src="https://user-images.githubusercontent.com/43482340/166332316-57014c01-d59d-4cc0-a5bd-d4006b5a42bc.png" width="200px"/>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Detalhes da refeição
+
+<img src="https://user-images.githubusercontent.com/43482340/166332386-fbad030e-9d3a-4fe6-ae36-ff68e9644982.png" width="200px"/>
+
+<img src="https://user-images.githubusercontent.com/43482340/166332434-d8279b42-c94b-495e-a237-82cec3f288d3.png" width="200px"/>
+
+### Refeições favoritas
+
+<img src="https://user-images.githubusercontent.com/43482340/166335253-a4db667e-25e8-47c8-be04-2a71295109df.png" width="200px"/>
+
+<img src="https://user-images.githubusercontent.com/43482340/166332539-e8144f13-5399-4397-984f-46bf38050f71.png" width="200px"/>
+
+### Tela de configurações
+
+<img src="https://user-images.githubusercontent.com/43482340/166335263-7de8a626-c010-4314-810c-0dc80e97e9e9.png" width="200px"/>
