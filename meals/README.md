@@ -2,6 +2,7 @@
 
 Aplicativo básico que possui uma lista de refeições separadas por categorias, sendo possível visualizar informações, ingredientes necessários e o passo a passo para executar a receita. Além de um tela de configurações, na qual é possível aplicar filtros por refeições sem glúten, sem lactose, veganas e/ou vegetarianas e marcar suas refeições favoritas.
 
+O objetivo desse aplicativo é trabalhar a navegação entre telas com e sem passagem de parametros entre elas.
 ## Telas
 
 ### Lista de categorias

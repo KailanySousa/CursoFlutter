@@ -2,10 +2,11 @@
 
 Repositório organizado com o objetivo de aprender sobre desenvolvimento de aplicações mobile utilizando Flutter
 
-  - [Expanses](https://github.com/KailanySousa/CursoFlutter/tree/main/expanses)
-  - [Meals](https://github.com/KailanySousa/CursoFlutter/tree/main/meals)
+- [Expanses](https://github.com/KailanySousa/CursoFlutter/tree/main/expanses)
+- [Meals](https://github.com/KailanySousa/CursoFlutter/tree/main/meals)
+- [Shop](https://github.com/KailanySousa/CursoFlutter/tree/main/shop)
 
----------------------------------------------------------------------------------------------------------
+---
 
 ## Curso
 
