@@ -19,10 +19,10 @@ Aplicativo básico que possui uma lista de refeições separadas por categorias,
 
 ### Refeições favoritas
 
-<img src="https://user-images.githubusercontent.com/43482340/166332525-cca1c76b-5840-4a92-bee9-d1933b1c94a2.png" width="200px"/>
+<img src="https://user-images.githubusercontent.com/43482340/166335253-a4db667e-25e8-47c8-be04-2a71295109df.png" width="200px"/>
 
 <img src="https://user-images.githubusercontent.com/43482340/166332539-e8144f13-5399-4397-984f-46bf38050f71.png" width="200px"/>
 
 ### Tela de configurações
 
-<img src="https://user-images.githubusercontent.com/43482340/166332574-bfd6cff2-279f-4fd4-9c3f-d42633c35039.png" width="200px"/>
+<img src="https://user-images.githubusercontent.com/43482340/166335263-7de8a626-c010-4314-810c-0dc80e97e9e9.png" width="200px"/>
