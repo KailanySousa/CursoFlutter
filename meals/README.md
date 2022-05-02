@@ -1,6 +1,6 @@
 # Meals
 
-Aplicativo básico que possui uma refeições separadas por categorias, sendo possível visualizar informações, ingredientes necessários e o passo a passo para executar a receita. Além de um tela de configurações, na qual é possível aplicar filtros por refeições sem glutén, sem lactose, veganas e/ou vegetarianas e marcar suas refeições favoritas.
+Aplicativo básico que possui uma lista de refeições separadas por categorias, sendo possível visualizar informações, ingredientes necessários e o passo a passo para executar a receita. Além de um tela de configurações, na qual é possível aplicar filtros por refeições sem glúten, sem lactose, veganas e/ou vegetarianas e marcar suas refeições favoritas.
 
 ## Telas
 
