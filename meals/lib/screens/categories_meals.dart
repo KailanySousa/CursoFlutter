@@ -20,11 +20,15 @@ class CategoriesMeals extends StatelessWidget {
       appBar: AppBar(
         title: Text(category.title),
       ),
-      body: ListView.builder(
-          itemCount: categoryMeals.length,
-          itemBuilder: (ctx, index) {
-            return MealItem(categoryMeals[index]);
-          }),
+      body: (categoryMeals.isEmpty
+          ? Center(
+              child: Text('Nenhuma refeição encontrada'),
+            )
+          : ListView.builder(
+              itemCount: categoryMeals.length,
+              itemBuilder: (ctx, index) {
+                return MealItem(categoryMeals[index]);
+              })),
     );
   }
 }
