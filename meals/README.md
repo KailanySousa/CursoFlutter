@@ -1,8 +1,53 @@
 # Meals
 
-Aplicativo básico que possui uma lista de refeições separadas por categorias, sendo possível visualizar informações, ingredientes necessários e o passo a passo para executar a receita. Além de um tela de configurações, na qual é possível aplicar filtros por refeições sem glúten, sem lactose, veganas e/ou vegetarianas e marcar suas refeições favoritas.
 
-O objetivo desse aplicativo é trabalhar a navegação entre telas com e sem passagem de parametros entre elas.
+
+<table>
+  <tr>
+    <td>
+      Sobre
+    </td>
+    <td>
+      Aplicativo básico que possui uma lista de refeições separadas por categorias
+    </td>
+  </tr>  
+  <tr>
+     <td>
+      Objetivo
+    </td>
+    <td>
+      Trabalhar navegação entre telas com e sem passagem de parametros entre elas
+    </td>
+  </tr>
+  <tr>
+     <td>
+      Funcionalidades
+    </td>
+    <td>
+      <ul>
+        <li>
+          Listagem de categorias. <a href="#lista-de-categorias"> Visualizar tela </a>
+        </li>
+        <li>
+         Listagem de refeições por categoria. <a href="#lista-de-refeições-por-categoria">Visualizar tela</a>
+        </li>
+        <li>
+         Visualização dos detalhes da refeição (tempo de preparo, dificuldade, custo, ingredientes necessários e passo a passo). <a href="#detalhes-da-refeição">Visualizar tela</a>
+        </li>
+        <li>
+         Marcar/Desmarcar uma refeição como favorita.
+        </li>
+        <li>
+         Visualização das refeições marcadas como favoritas. <a href="#refeições-favoritas">Visualizar tela</a>
+        </li>
+        <li>
+          Aplicação de filtros nas listagem de refeições, sendo possível filtrar por: refeições sem glúten, sem lactose, veganas e/ou vegetarianas. <a href="#tela-de-configurações">Visualizar tela</a> 
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 ## Telas
 
 ### Lista de categorias
