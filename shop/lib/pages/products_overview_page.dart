@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/components/product_item.dart';
 import 'package:shop/data/dummy_data_products.dart';
 import 'package:shop/models/product.dart';
 
@@ -23,9 +24,7 @@ class ProductsOverviewPage extends StatelessWidget {
           mainAxisSpacing:
               10, // espaçamento entre os elementos no eixo principal
         ),
-        itemBuilder: (ctx, i) => Text(
-          loadedProducts[i].title,
-        ),
+        itemBuilder: (ctx, i) => ProductItem(product: loadedProducts[i]),
       ),
     );
   }
